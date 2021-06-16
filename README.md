@@ -1,24 +1,10 @@
 # README
+Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://www.paimongems.com/
 
-Things you may want to cover:
+This project was created as a tool for Genshin Impact. 
 
-* Ruby version
+Genshin Impact™ is a registered trademark of MiHoYo Co., Ltd.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This site is not affiliated with or endorsed by miHoYo. Images and data © MiHoYo Co., Ltd.
