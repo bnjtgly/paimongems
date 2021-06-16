@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <title>Paimongems</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('https://cdn.discordapp.com/emojis/750262922265100298.png?') %>
+  </head>
+
+  <body>
+    <%= render "shared/navigation" %>
+    <%= render "shared/donate" %>
+    <div class="container my-3 mx-auto px-6 py-8">
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
+  </body>
+</html>

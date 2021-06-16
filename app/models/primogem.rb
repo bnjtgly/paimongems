@@ -1,0 +1,2 @@
+class Primogem < ApplicationRecord
+end
