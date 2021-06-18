@@ -144,8 +144,14 @@ function App() {
 								<p className="card-text">Daily Primos: {paimongems.daily_primos}</p>
 								<p className="card-text">Abyss: {paimongems.abyss}</p>
 								<p className="card-text">Battle Pass: {paimongems.battle_pass}</p>
+								<p className="card-text text-primary"><strong>Acquaint Fate: {paimongems.a_fates}</strong></p>
+								<p className="card-text" style={{color: "#C06AB5"}}><strong>Intertwined Fate: {paimongems.i_fates}</strong></p>
+
+								{/* {(paimongems.total_primogems) === 0 ? `Fate: ${(paimongems.i_fates)}` : ""} */}
+								
+								
 								<h6 className="card-text text-success"><strong>Total: {(paimongems.total_primogems) ? (paimongems.total_primogems) : 0}</strong></h6>
-								<h6 className="card-text text-warning"><strong>Pulls: {(paimongems.total_primogems) ? ~~((paimongems.total_primogems)/160) : 0}</strong></h6>
+								<h6 className="card-text text-warning"><strong>Pulls: {(paimongems.total_primogems) ? ~~((paimongems.total_primogems)/160) : 0} </strong>(Does not include fates)</h6>
 							</div>
 							<div>
 								<br />
