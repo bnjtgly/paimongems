@@ -7,7 +7,7 @@ class Api::V1::PrimogemsController < ApplicationController
   
     def create
         # render json: {paimongems: dates_params}
-        render json: {start_date: dates_params[:date_from], end_date: dates_params[:date_to].to_date, number_of_days: number_of_days, welkin: dates_params[:welkin], daily_primos: get_daily_primos, abyss: get_abyss_primos[:abyss_primos_total], battle_pass: get_battle_pass_rewards[:total_primogems], total_primogems: get_total_primogems, error: error_test}
+        render json: {start_date: dates_params[:date_from], end_date: dates_params[:date_to].to_date, number_of_days: number_of_days, welkin: dates_params[:welkin], daily_primos: get_daily_primos, abyss: get_abyss_primos[:abyss_primos_total], battle_pass: get_battle_pass_rewards[:total_primogems], total_primogems: get_total_primogems, a_fates: get_battle_pass_rewards[:total_acquaint_fate], i_fates: get_battle_pass_rewards[:total_intertwined_fate]}
 
         # v_number_of_days = number_of_days
         # v_welkin = dates_params[:welkin]
@@ -107,7 +107,7 @@ class Api::V1::PrimogemsController < ApplicationController
     end
 
     def get_battle_pass_rewards
-        primos = 600
+        primos = 680
         acquaint_fate = 5 
         intertwined_fate = 4
         if dates_params[:bp]
