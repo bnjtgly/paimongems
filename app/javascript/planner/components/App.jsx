@@ -17,9 +17,9 @@ function App() {
 
 	useEffect(
 		() => {
-		  let timer1 = setTimeout(() => setShow(true), 3000);
+		  let timer = setTimeout(() => setShow(true), 1000);
 		  return () => {
-			clearTimeout(timer1);
+			clearTimeout(timer);
 		  };
 		},
 		[]
