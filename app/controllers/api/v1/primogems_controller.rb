@@ -47,14 +47,13 @@ class Api::V1::PrimogemsController < ApplicationController
     end
 
     def dates_params
+        params.permit(:date_from, :date_to, :welkin, :bp, :current_primogems, :test_date)
         if !params[:date_from].present?
             params[:date_from] = Date.today.to_formatted_s(:iso8601)
         end
         if !params[:date_to].present?
             params[:date_to] = Date.today.to_formatted_s(:iso8601)
         end
-        params.permit(:date_from, :date_to, :welkin, :bp, :current_primogems, :test_date)
-        # params[:test_date] = params[:test_date] ? params[:test_date] : '2021-06-15'.to_date
         
     end
 
