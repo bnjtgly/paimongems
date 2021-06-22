@@ -12,7 +12,19 @@ function App() {
 	const [bp, setBp] = useState(false);
 	const [current_primogems, setCurrentPrimogems] = useState(0);
 	// const [isLoaded, setIsLoaded] = useState(false);
+	const [show, setShow] = useState(false);
 	const [paimongems, setPaimongems] = useState({})
+
+	useEffect(
+		() => {
+		  let timer = setTimeout(() => setShow(true), 500);
+		  return () => {
+			clearTimeout(timer);
+		  };
+		},
+		[]
+	  );
+
 	// async function fetchUserData() {
 	// 	const response = await fetch("/api/v1/primogems");
 	// 	setCalculation(await response.json());
@@ -25,15 +37,6 @@ function App() {
 
 
 	async function postPaimonData(params) {
-		// const requestOptions = {
-		// 			method: 'POST',
-		// 			headers: { 'Content-Type': 'application/json','Accept': 'application/json' },
-		// 			body: JSON.stringify(params)
-		// 		};
-		// const response = await fetch("/api/v1/primogems", requestOptions)
-    	// const data = await response.json();
-		// setPaimongems(data)
-
 		try {
 			const requestOptions = {
 				method: 'POST',
@@ -108,7 +111,7 @@ function App() {
 
 
 	
-	return(
+	return show ? (
 		<div className="main">
 		 	<div>
 		 		<DateRange />
@@ -164,7 +167,7 @@ function App() {
 				</div>
 			</div>
 		</div>
-	)
+	) :  <div className="loader"></div>
 }
 
 export default App
